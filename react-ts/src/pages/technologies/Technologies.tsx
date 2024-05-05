@@ -10,6 +10,9 @@ export const Technologies = () => {
                 <h1 className={"font-inter font-semibold text-5xl tracking-wide mb-5"}>I can work with...</h1>
                 <TechnologyGrid/>
             </div>
+            <div>
+
+            </div>
             <NavigationArrow mode={"down"} id={"projects"}/>
         </div>
     );

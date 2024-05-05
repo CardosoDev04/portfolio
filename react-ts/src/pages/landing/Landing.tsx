@@ -1,7 +1,7 @@
-import {useState, useEffect} from 'react';
-import {Memoji} from "../../image-dir/image-dir.ts";
+import { useState, useEffect } from 'react';
+import { Memoji } from "../../image-dir/image-dir.ts";
 import './landing.css';
-import {NavigationArrow} from "../../components/NavigationArrow.tsx";
+import { NavigationArrow } from "../../components/NavigationArrow.tsx";
 
 export const Landing = () => {
     const [text, setText] = useState('');
@@ -11,11 +11,23 @@ export const Landing = () => {
         const typingEffect = async () => {
             setIsTyping(true);
             const name = 'João Cardoso.';
+
+            // Typing animation
             for (let i = 0; i < name.length; i++) {
-                await new Promise(resolve => setTimeout(resolve, 60));
+                await new Promise(resolve => setTimeout(resolve, 150));
                 setText(name.substring(0, i + 1));
             }
+
+            await new Promise(resolve => setTimeout(resolve, 4000));
+
+            // Loop through characters in reverse order
+            for (let i = name.length - 1; i >= 0; i--) {
+                await new Promise(resolve => setTimeout(resolve, 40));
+                setText(name.substring(0, i + 1));
+            }
+
             setIsTyping(false);
+            typingEffect();
         };
 
         typingEffect();
@@ -29,11 +41,11 @@ export const Landing = () => {
                         <h1 className={"font-inter font-semibold tracking-wide text-6xl"}>Hi there,</h1>
                         <h1 className={"flex font-inter font-semibold tracking-wide text-6xl"}>
                             I'm <span className={"text-blue-700 typing-text ml-4"}>
-                     <div className="typing-container">
-                        <span className={"text-blue-700 typing-text ml-2"}>
-                            {isTyping ? text : 'João Cardoso.'}
-                        </span>
-                    </div>
+                <div className="typing-container">
+                  <span className={"text-blue-700 typing-text ml-2"}>
+                    {isTyping ? text : 'João Cardoso.'}
+                  </span>
+                </div>
               </span>
                         </h1>
                     </div>
