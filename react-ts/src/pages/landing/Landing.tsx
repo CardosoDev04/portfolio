@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react';
-import {ArrowDown, Memoji} from "../../image-dir/image-dir.ts";
+import {Memoji} from "../../image-dir/image-dir.ts";
 import './landing.css';
+import {NavigationArrow} from "../../components/NavigationArrow.tsx";
 
 export const Landing = () => {
     const [text, setText] = useState('');
@@ -21,10 +22,10 @@ export const Landing = () => {
     }, []);
 
     return (
-        <div className={"flex flex-col h-screen justify-center items-center"}>
+        <div className={"flex flex-col h-screen justify-center items-center"} id={"landing"}>
             <div className={"flex justify-center align-middle items-center"}>
                 <div className={"w-1/2 select-none"}>
-                    <div className={"flex flex-col"}>
+                    <div className={"flex flex-col mt-5"}>
                         <h1 className={"font-inter font-semibold tracking-wide text-6xl"}>Hi there,</h1>
                         <h1 className={"flex font-inter font-semibold tracking-wide text-6xl"}>
                             I'm <span className={"text-blue-700 typing-text ml-4"}>
@@ -36,10 +37,14 @@ export const Landing = () => {
               </span>
                         </h1>
                     </div>
+                    <div className={"flex text-lg mt-5 text-gray-500 tracking font-medium"}>
+                        <p>Full-stack developer from Lisbon, Portugal specializing in building high-performing software solutions across frontend and backend.
+                        </p>
+                    </div>
                 </div>
                 <img alt={"memoji"} className={"flex w-6/12 h-6/12"} src={Memoji}/>
             </div>
-            <img className={"w-20 h-10 opacity-50 cursor-pointer"} alt={"arrow down"} src={ArrowDown}/>
+            <NavigationArrow mode={"down"} id={"technologies"}/>
         </div>
     );
 };
