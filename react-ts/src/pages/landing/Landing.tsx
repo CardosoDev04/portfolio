@@ -34,7 +34,7 @@ export const Landing = () => {
     }, []);
 
     return (
-        <div className={"flex flex-col h-screen justify-center items-center"} id={"landing"}>
+        <div className={"flex snap-point flex-col h-screen justify-center items-center"} id={"landing"}>
             <div className={"flex justify-center align-middle items-center"}>
                 <div className={"w-1/2 select-none"}>
                     <div className={"flex flex-col mt-5"}>

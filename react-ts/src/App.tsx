@@ -3,21 +3,30 @@ import { MaxWidthWrapper } from './components/MaxWidthWrapper.tsx';
 import { Landing } from './pages/landing/Landing.tsx';
 import { Projects } from './pages/projects/Projects.tsx';
 import { Technologies } from './pages/technologies/Technologies.tsx';
+import {DarkThemeToggle, Flowbite} from "flowbite-react";
+type ThemeMode = "light" | "dark" | "auto";
+
+declare const useThemeMode: () => {
+    mode: ThemeMode;
+    computedMode: ThemeMode; // "light" | "dark"
+    setMode: (mode: ThemeMode) => void;
+    toggleMode: () => void;
+    clearMode: () => void;
+};
 
 function App() {
 
     return (
-        <MaxWidthWrapper className={"snap-mandatory snap-y overflow-auto"}>
-            <div className={"snap-start h-screen"}>
+        <Flowbite>
+        <div className={"app dark:bg-gray-800"}>
+            <DarkThemeToggle  />
+        <MaxWidthWrapper className={"snap-mandatory snap-y"}>
                 <Landing/>
-            </div>
-            <div className={"snap-start h-screen"}>
                 <Technologies/>
-            </div>
-            <div className={"snap-start h-screen"}>
                 <Projects/>
-            </div>
         </MaxWidthWrapper>
+        </div>
+        </Flowbite>
 );
 }
 
