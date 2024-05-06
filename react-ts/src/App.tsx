@@ -3,7 +3,8 @@ import { MaxWidthWrapper } from './components/MaxWidthWrapper.tsx';
 import { Landing } from './pages/landing/Landing.tsx';
 import { Projects } from './pages/projects/Projects.tsx';
 import { Technologies } from './pages/technologies/Technologies.tsx';
-import {DarkThemeToggle, Flowbite} from "flowbite-react";
+import {Flowbite} from "flowbite-react";
+import {ThemeProvider} from "../@/components/theme-provider.tsx";
 type ThemeMode = "light" | "dark" | "auto";
 
 declare const useThemeMode: () => {
@@ -18,14 +19,15 @@ function App() {
 
     return (
         <Flowbite>
+            <ThemeProvider defaultTheme={"light"} storageKey="ui-theme">
         <div className={"app dark:bg-gray-800"}>
-            <DarkThemeToggle  />
         <MaxWidthWrapper className={"snap-mandatory snap-y"}>
                 <Landing/>
                 <Technologies/>
                 <Projects/>
         </MaxWidthWrapper>
         </div>
+            </ThemeProvider>
         </Flowbite>
 );
 }

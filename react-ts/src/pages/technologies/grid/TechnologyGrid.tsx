@@ -3,7 +3,7 @@ import {technologiesArray} from "../../../image-dir/image-dir.ts";
 
 export const TechnologyGrid = () => {
     return (
-        <div className={"flex rounded-xl shadow-front-xstrong drop-shadow-sm"}>
+        <div className={"flex rounded-xl drop-shadow-sm"}>
         <div className={"grid grid-cols-6"}>
             {technologiesArray.map((technology, index) => {
                 return (

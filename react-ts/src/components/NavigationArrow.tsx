@@ -12,7 +12,7 @@ export const NavigationArrow = ({mode, id}: {mode:string,id:string}) => {
         }
     }
     return (
-        <div className={"opacity-10 transition-opacity hover:opacity-100"}>
+        <div className={"opacity-10 dark:invert transition-opacity hover:opacity-100"}>
         <img className={cn("w-8 cursor-pointer", cname)} alt={"arrow down"} src={ArrowDown}
         onClick={handleClick}
         />

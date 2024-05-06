@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Memoji } from "../../image-dir/image-dir.ts";
 import './landing.css';
 import { NavigationArrow } from "../../components/NavigationArrow.tsx";
+import {ModeToggle} from "../../../@/components/mode-toggle.tsx";
 
 export const Landing = () => {
     const [text, setText] = useState('');
@@ -35,21 +36,24 @@ export const Landing = () => {
 
     return (
         <div className={"flex snap-point flex-col h-screen justify-center items-center"} id={"landing"}>
-            <div className={"flex justify-center align-middle items-center"}>
-                <div className={"w-1/2 select-none"}>
-                    <div className={"flex flex-col mt-5"}>
-                        <h1 className={"font-inter font-semibold tracking-wide text-6xl"}>Hi there,</h1>
-                        <h1 className={"flex font-inter font-semibold tracking-wide text-6xl"}>
+            <div className={"absolute top-0 sm:flex"}>
+            <ModeToggle/>
+            </div>
+            <div className={"flex flex-col sm:flex-row justify-center align-middle sm:items-center sm:mb-0 mb-20"}>
+                <div className={"sm:w-1/2 w-20 select-none"}>
+                    <div className={"flex flex-col sm:mt-5"}>
+                        <h1 className={"font-inter font-semibold tracking-wide sm:text-6xl text-3xl"}>Hi there,</h1>
+                        <h1 className={"flex font-inter font-semibold tracking-wide sm:text-6xl text-3xl"}>
                             I'm <span className={"text-blue-700 typing-text ml-4"}>
                 <div className="typing-container">
-                  <span className={"text-blue-700 typing-text ml-2"}>
+                  <span className={"text-blue-700 typing-text sm:ml-2"}>
                     {isTyping ? text : 'João Cardoso.'}
                   </span>
                 </div>
               </span>
                         </h1>
                     </div>
-                    <div className={"flex text-lg mt-5 text-gray-500 tracking font-medium"}>
+                    <div className={"flex sm:text-lg w-[300px] sm:w-auto mt-5 text-gray-500 tracking font-medium dark:text-gray-200"}>
                         <p>Full-stack developer from Lisbon, Portugal specializing in building high-performing software solutions across frontend and backend.
                         </p>
                     </div>
