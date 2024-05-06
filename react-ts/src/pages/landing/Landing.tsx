@@ -24,8 +24,10 @@ export const Landing = () => {
             // Loop through characters in reverse order
             for (let i = name.length - 1; i >= 0; i--) {
                 await new Promise(resolve => setTimeout(resolve, 40));
-                setText(name.substring(0, i + 1));
+                setText(name.substring(0, i ));
             }
+
+            await new Promise(resolve => setTimeout(resolve, 100));
 
             setIsTyping(false);
             typingEffect();
@@ -35,7 +37,7 @@ export const Landing = () => {
     }, []);
 
     return (
-        <div className={"flex snap-point flex-col h-screen justify-center items-center"} id={"landing"}>
+        <div className={"flex snap-start flex-col h-screen justify-center items-center"} id={"landing"}>
             <div className={"absolute top-10 transition-opacity opacity-50 hover:opacity-100 sm:flex"}>
             <ModeToggle/>
             </div>

@@ -20,8 +20,8 @@ function App() {
     return (
         <Flowbite>
             <ThemeProvider defaultTheme={"light"} storageKey="ui-theme">
-        <div className={"app dark:bg-gray-800"}>
-        <MaxWidthWrapper className={"snap-mandatory snap-y"}>
+        <div className={"app dark:bg-gray-800 snap-mandatory snap-y overflow-scroll"}>
+        <MaxWidthWrapper>
                 <Landing/>
                 <Technologies/>
                 <Projects/>
