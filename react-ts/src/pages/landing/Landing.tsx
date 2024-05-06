@@ -36,7 +36,7 @@ export const Landing = () => {
 
     return (
         <div className={"flex snap-point flex-col h-screen justify-center items-center"} id={"landing"}>
-            <div className={"absolute top-0 sm:flex"}>
+            <div className={"absolute top-10 transition-opacity opacity-50 hover:opacity-100 sm:flex"}>
             <ModeToggle/>
             </div>
             <div className={"flex flex-col sm:flex-row justify-center align-middle sm:items-center sm:mb-0 mb-20"}>
