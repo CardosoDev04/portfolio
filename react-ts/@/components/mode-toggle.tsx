@@ -1,12 +1,12 @@
 import { Moon, Sun } from "lucide-react"
 
-import { Button } from "../../@/components/ui/button.tsx"
+import { Button } from "./ui/button.tsx"
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger,
-} from "../../@/components/ui/dropdown-menu.tsx"
+} from "./ui/dropdown-menu.tsx"
 import { useTheme } from "./theme-provider.tsx"
 import {useState} from "react";
 

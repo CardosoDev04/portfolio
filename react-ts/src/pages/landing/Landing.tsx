@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Memoji } from "../../image-dir/image-dir.ts";
 import './landing.css';
 import { NavigationArrow } from "../../components/NavigationArrow.tsx";
-import {ModeToggle} from "../../components/mode-toggle.tsx";
+import {ModeToggle} from "../../../@/components/mode-toggle.tsx";
 
 export const Landing = () => {
     const [text, setText] = useState('');
