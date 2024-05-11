@@ -35,9 +35,9 @@ const ThemeSwitch = (props: SwitchProps) => {
                     {...getWrapperProps({onClick : toggleTheme})}
                     className={slots.wrapper({
                         class: [
-                            "w-8 h-8",
+                            "w-6 h-6",
                             "flex items-center justify-center",
-                            "rounded-lg bg-default-100 hover:bg-default-200",
+                            "rounded-xl bg-default-100 hover:bg-default-200",
                         ],
                     })}
                 >

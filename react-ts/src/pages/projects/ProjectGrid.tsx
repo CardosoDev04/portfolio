@@ -14,7 +14,7 @@ export const ProjectGrid = () => {
                         <p className="text-tiny uppercase font-bold font-inter">Technologies used</p>
                         <small className="text-default-500 flex flex-row flex-wrap">{project.technologies.map((technology) => (
                             <div>
-                                <span className="text-default-400 text-xs mx-1">{technology}</span>
+                                <span className="font-inter text-default-400 text-xs mx-1">{technology}</span>
                             </div>
                         ))}</small>
                         <h4 className="font-bold font-inter text-large mt-5">{project.title}</h4>
@@ -33,10 +33,10 @@ export const ProjectGrid = () => {
                                 }
                             }}
                         />
-                        <Button color="primary" onPress={onOpen} className={"flex w-32 mt-2"}>
+                        <Button color="primary" onPress={onOpen} className={"flex font-inter w-32 mt-2"}>
                             See details
                         </Button>
-                        <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+                        <Modal isOpen={isOpen} className={"font-inter"} onOpenChange={onOpenChange}>
                             <ModalContent>
                                 {(onClose) => (
                                     <>

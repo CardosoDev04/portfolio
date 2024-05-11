@@ -27,6 +27,7 @@ export const projects = [
         description: "SECA is a web application that allows users to interact with the TicketMaster API in real time to search for shows and events and then group them into 'playlist' like collections.\n" +
         "This project was developed as a group project for the Introduction to Web Development course at Lisbon School of Engineering.\n" +
         "The frontend is built with jQuery and Bootstrap while the backend is built with Node.js and Express. ElasticSearch was used as a database for user/group records and for the search functionality.\n" +
+            "We've also implemented a robust REST API of our own able to handle CRUD requests and other business logic.\n"+
         "The application also has a login system with JWT authentication through Passport.js and a user-friendly interface.",
         technologies: ["Node.js", "Express", "ElasticSearch", "Bootstrap"],
         img: SecaScreenshot,
