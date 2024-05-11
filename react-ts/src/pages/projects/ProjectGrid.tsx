@@ -32,7 +32,7 @@ export const ProjectGrid = () => {
                                 }
                             }}
                         />
-                        <Button color="default" className={"flex w-32 mt-2"}>
+                        <Button color="primary" className={"flex w-32 mt-2"}>
                             See details
                         </Button>
                     </CardBody>

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Memoji } from "../../image-dir/image-dir.ts";
 import './landing.css';
 import { NavigationArrow } from "../../components/NavigationArrow.tsx";
-import {ModeToggle} from "../../../@/components/mode-toggle.tsx";
+import ThemeSwitch from "../../../@/components/mode-toggle.tsx";
 
 export const Landing = () => {
     const [text, setText] = useState('');
@@ -39,7 +39,7 @@ export const Landing = () => {
     return (
         <div className={"flex snap-start flex-col h-screen justify-center items-center"} id={"landing"}>
             <div className={"absolute top-10 transition-opacity opacity-50 hover:opacity-100 sm:flex"}>
-            <ModeToggle/>
+            <ThemeSwitch/>
             </div>
             <div className={"flex flex-col sm:flex-row justify-center align-middle sm:items-center sm:mb-0 mb-20"}>
                 <div className={"sm:w-1/2 w-20 select-none"}>

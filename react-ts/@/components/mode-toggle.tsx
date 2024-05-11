@@ -1,32 +1,54 @@
-import { Moon, Sun } from "lucide-react"
-
-import { Button } from "./ui/button.tsx"
-import { useTheme } from "./theme-provider.tsx"
+import {useSwitch, VisuallyHidden, SwitchProps} from "@nextui-org/react";
+import {MoonIcon} from "./ui/MoonIcon.tsx";
+import {SunIcon} from "./ui/SunIcon.tsx";
 import {useState} from "react";
 
-export function ModeToggle() {
-    const [currentTheme, setCurrentTheme] = useState(localStorage.getItem("ui-theme"));
-    const { setTheme } = useTheme();
+const ThemeSwitch = (props: SwitchProps) => {
+
+    const initialTheme = localStorage.getItem("ui-theme") === "dark";
+    const [isSelected,setIsSelected] = useState(initialTheme);
+
+    const toggleTheme = () => {
+        if(isSelected) {
+            document.documentElement.classList.remove("dark")
+        } else {
+            document.documentElement.classList.add("dark")
+        }
+        setIsSelected(!isSelected);
+        localStorage.setItem("ui-theme", isSelected ? "light" : "dark");
+    }
+    const {
+        Component,
+        slots,
+        getBaseProps,
+        getInputProps,
+        getWrapperProps
+    } = useSwitch({...props, isSelected});
 
     return (
-        <Button variant="outline" size="icon" onClick={() => {
-            if (currentTheme === "light") {
-                setCurrentTheme("dark");
-                setTheme("dark");
-            } else {
-                setCurrentTheme("light");
-                setTheme("light");
-            }
-        }}>
-            {currentTheme === "light" ? (
-                <Sun
-                    className="h-[1.2rem] w-[1.2rem] opacity-1 rotate-0 transition-all duration-500 ease-in-out dark:-rotate-90"
-                />
-            ) : (
-                <Moon
-                    className="h-[1.2rem] w-[1.2rem] opacity-0 transition-opacity duration-500 ease-in-out dark:opacity-1 dark:rotate-0"
-                />
-            )}
-        </Button>
-    );
+        <div className="flex flex-col gap-2">
+            <Component {...getBaseProps()}>
+                <VisuallyHidden>
+                    <input {...getInputProps()} />
+                </VisuallyHidden>
+                <div
+                    {...getWrapperProps({onClick : toggleTheme})}
+                    className={slots.wrapper({
+                        class: [
+                            "w-8 h-8",
+                            "flex items-center justify-center",
+                            "rounded-lg bg-default-100 hover:bg-default-200",
+                        ],
+                    })}
+                >
+                    {isSelected ? <SunIcon/> : <MoonIcon/>}
+                </div>
+            </Component>
+        </div>
+    )
+}
+
+
+export default function App() {
+    return <ThemeSwitch/>
 }
