@@ -1,4 +1,4 @@
-import {Card, CardHeader, CardBody, Image, Button} from "@nextui-org/react";
+import {Card, CardHeader, CardBody, Image, Button, useDisclosure,Modal, ModalContent, ModalBody, ModalFooter, ModalHeader} from "@nextui-org/react";
 import {projects} from "@/pages/projects/projects.ts";
 
 export const ProjectGrid = () => {
@@ -6,9 +6,10 @@ export const ProjectGrid = () => {
 
     return (
         <>
-        <div className={"grid grid-cols-3 mt-10"}>
+        <div className={"grid grid-cols-1 sm:grid-cols-3 mt-5"}>
             { projects.map((project) => {
-                return<Card className="py-4 mx-10">
+                const {isOpen, onOpen, onOpenChange} = useDisclosure();
+                return<Card className="py-4 mt-10 sm:mx-10">
                     <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                         <p className="text-tiny uppercase font-bold font-inter">Technologies used</p>
                         <small className="text-default-500 flex flex-row flex-wrap">{project.technologies.map((technology) => (
@@ -32,9 +33,30 @@ export const ProjectGrid = () => {
                                 }
                             }}
                         />
-                        <Button color="primary" className={"flex w-32 mt-2"}>
+                        <Button color="primary" onPress={onOpen} className={"flex w-32 mt-2"}>
                             See details
                         </Button>
+                        <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+                            <ModalContent>
+                                {(onClose) => (
+                                    <>
+                                        <ModalHeader className="flex flex-col gap-1">{project.title}</ModalHeader>
+                                        <ModalBody>
+                                            {
+                                                project.description.split('\n').map((paragraph) => {
+                                                    return <p className="text-default-500">{paragraph}</p>
+                                                })
+                                            }
+                                        </ModalBody>
+                                        <ModalFooter>
+                                            <Button color="danger" variant="light" onPress={onClose}>
+                                                Close
+                                            </Button>
+                                        </ModalFooter>
+                                    </>
+                                )}
+                            </ModalContent>
+                        </Modal>
                     </CardBody>
                 </Card>
                 })
