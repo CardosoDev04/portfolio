@@ -1,9 +1,16 @@
 import portfolioMemoji from '../assets/portfolio-memoji.png'
 import arrow_down from '../assets/arrow_down.png'
+import rune_screenshot from '../assets/rune_screenshot.png'
+import seca_screenshot from '../assets/seca_screenshot.png'
+import portfolio_screenshot from '../assets/portfolio_screenshot.png'
 
 
 export const Memoji = portfolioMemoji
 export const ArrowDown = arrow_down
+
+export const RuneScreenshot = rune_screenshot
+export const SecaScreenshot = seca_screenshot
+export const PortfolioScreenshot = portfolio_screenshot
 
 // Technologies
 export const technologiesArray: string[] = [
