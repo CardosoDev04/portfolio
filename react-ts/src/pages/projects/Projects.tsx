@@ -6,7 +6,7 @@ export const Projects = () => {
     return (
         <div className={"flex flex-col items-center justify-center mb-20"} id={"projects"}>
             <div className={"flex flex-col h-3/4 items-center gap-y-20"}>
-                <div className={"flex snap-mandatory snap-start"}>
+                <div className={"flex sm:snap-mandatory sm:snap-start"}>
                 <NavigationArrow mode={"up"} id={"technologies"}/>
                 </div>
                 <div className={"flex flex-col items-center"}>

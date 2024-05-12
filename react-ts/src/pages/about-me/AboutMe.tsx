@@ -6,7 +6,7 @@ export const AboutMe = () => {
         <>
             <div className={"flex"}>
             <div className={"flex flex-col items-center justify-center mt-20"} id={"about-me"}>
-                <div className={"flex mt-10 snap-mandatory snap-start"}>
+                <div className={"flex mt-10 sm:snap-mandatory sm:snap-start"}>
                 <NavigationArrow mode={"up"} id={"projects"}/>
                 </div>
                 <div className={"flex flex-col w-full items-center mt-20 mb-40"}>
