@@ -5,6 +5,7 @@ import { Projects } from './pages/projects/Projects.tsx';
 import { Technologies } from './pages/technologies/Technologies.tsx';
 import {Flowbite} from "flowbite-react";
 import {ThemeProvider} from "../@/components/theme-provider.tsx";
+import {AboutMe} from "@/pages/about-me/AboutMe.tsx";
 type ThemeMode = "light" | "dark" | "auto";
 
 declare const useThemeMode: () => {
@@ -25,7 +26,12 @@ function App() {
         <MaxWidthWrapper>
                 <Landing/>
                 <Technologies/>
+            <div  className={"mb-[900px] sm:mb-0"}>
                 <Projects/>
+            </div>
+            <div>
+            <AboutMe/>
+            </div>
         </MaxWidthWrapper>
         </div>
             </ThemeProvider>
