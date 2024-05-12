@@ -1,8 +1,10 @@
 import {technologiesArray} from "../../../image-dir/image-dir.ts";
+import {Card} from "@nextui-org/react";
 
 
 export const TechnologyGrid = () => {
     return (
+       <Card className={"p-5 mt-3"}>
         <div className={"flex rounded-xl drop-shadow-sm"}>
         <div className={"grid grid-cols-8"}>
             {technologiesArray.map((technology, index) => {
@@ -14,5 +16,6 @@ export const TechnologyGrid = () => {
             })}
         </div>
         </div>
+       </Card>
     );
 };
