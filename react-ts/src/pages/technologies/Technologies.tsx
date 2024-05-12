@@ -3,8 +3,8 @@ import { TechnologyGrid } from "./grid/TechnologyGrid.tsx";
 
 export const Technologies = () => {
     return (
-        <div className={"flex snap-point flex-col h-screen items-center justify-center"} id={"technologies"}>
-            <div className={"mt-24 sm:mt-0 "}>
+        <div className={"flex flex-col scroll-section items-center justify-center"} id={"technologies"}>
+            <div className={"mt-24 sm:mt-0"}>
             <NavigationArrow mode={"up"} id={"landing"} />
             </div>
             <div className={"flex flex-col justify-center items-center h-3/4"}>

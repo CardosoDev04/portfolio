@@ -37,7 +37,7 @@ export const Landing = () => {
     }, []);
 
     return (
-        <div className={"flex snap-start flex-col h-screen justify-center items-center"} id={"landing"}>
+        <div className={"flex snap-mandatory flex-col scroll-section justify-center items-center"} id={"landing"}>
             <div className={"absolute top-10 transition-opacity opacity-50 hover:opacity-100 sm:flex"}>
             <ThemeSwitch/>
             </div>

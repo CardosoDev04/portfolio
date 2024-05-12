@@ -4,7 +4,7 @@ import {ProjectGrid} from "@/pages/projects/ProjectGrid.tsx";
 
 export const Projects = () => {
     return (
-        <div className={"flex snap-start flex-col h-screen items-center justify-center"} id={"projects"}>
+        <div className={"flex scroll-section snap-mandatory flex-col items-center justify-center"} id={"projects"}>
             <div className={"flex flex-col h-3/4 mt-10 items-center"}>
                 <div className={"flex mb-10"}>
                 <NavigationArrow mode={"up"} id={"technologies"}/>
