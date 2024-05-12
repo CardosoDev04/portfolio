@@ -3,18 +3,14 @@ import { TechnologyGrid } from "./grid/TechnologyGrid.tsx";
 
 export const Technologies = () => {
     return (
-        <div className={"flex flex-col scroll-section items-center justify-center"} id={"technologies"}>
-            <div className={"mt-24 sm:mt-0"}>
+        <div className={"flex flex-col items-center snap-mandatory snap-start justify-center gap-y-20"} id={"technologies"}>
             <NavigationArrow mode={"up"} id={"landing"} />
-            </div>
-            <div className={"flex flex-col justify-center items-center h-3/4"}>
-                <h1 className={"font-inter font-semibold select-none text-3xl tracking-wide mb-12"}>Technologies</h1>
+            <div className={"flex flex-col mt-20 justify-center items-center h-3/4"}>
+                <h1 className={"font-inter font-semibold select-none text-3xl tracking-wide"}>Technologies</h1>
                 <TechnologyGrid />
                 <span className={"font-inter font-medium select-none text-xl tracking-wide mt-12"}>Scroll down to see where I have <span className={"text-blue-700"}>used</span> them...</span>
             </div>
-            <div className={"mb-72 sm:mb-0 "}>
             <NavigationArrow mode={"down"} id={"projects"} />
-            </div>
         </div>
     );
 };

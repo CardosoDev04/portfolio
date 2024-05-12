@@ -37,11 +37,11 @@ export const Landing = () => {
     }, []);
 
     return (
-        <div className={"flex snap-mandatory flex-col scroll-section justify-center items-center"} id={"landing"}>
+        <div className={"flex snap-mandatory snap-start flex-col justify-center items-center"} id={"landing"}>
             <div className={"absolute top-10 transition-opacity opacity-50 hover:opacity-100 sm:flex"}>
             <ThemeSwitch/>
             </div>
-            <div className={"flex flex-col sm:flex-row justify-center align-middle sm:items-center sm:mb-0 mb-20"}>
+            <div className={"flex flex-col mt-20 sm:flex-row justify-center align-middle sm:items-center sm:mb-0 mb-20"}>
                 <div className={"sm:w-1/2 w-20 select-none"}>
                     <div className={"flex flex-col sm:mt-5"}>
                         <h1 className={"font-inter font-semibold tracking-wide sm:text-6xl text-3xl"}>Hi there,</h1>

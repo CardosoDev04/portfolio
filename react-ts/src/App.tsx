@@ -23,16 +23,20 @@ function App() {
         <Flowbite>
             <ThemeProvider defaultTheme={"light"} storageKey="ui-theme">
         <div className={"app dark:bg-gray-800"}>
-        <MaxWidthWrapper>
-                <Landing/>
-                <Technologies/>
-            <div  className={"mb-[900px] sm:mb-0"}>
-                <Projects/>
-            </div>
-            <div>
-            <AboutMe/>
-            </div>
-        </MaxWidthWrapper>
+            <MaxWidthWrapper className={"grid grid-cols-1 gap-y-40"}>
+                <div className={"flex flex-col items-center justify-center"}>
+                    <Landing/>
+                </div>
+                <div className={"flex flex-col items-center justify-center"}>
+                    <Technologies/>
+                    </div>
+                        <div className={"flex flex-col items-center justify-center mb-[900px] sm:mb-0"}>
+                            <Projects/>
+                        </div>
+                        <div className={"flex flex-col items-center justify-center"}>
+                            <AboutMe/>
+                        </div>
+            </MaxWidthWrapper>
         </div>
             </ThemeProvider>
         </Flowbite>
