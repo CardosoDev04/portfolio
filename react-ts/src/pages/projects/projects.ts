@@ -1,5 +1,5 @@
 
-import {PortfolioScreenshot,RuneScreenshot,SecaScreenshot} from "@/image-dir/image-dir.ts";
+import {PortfolioScreenshot, RuneScreenshot, SecaScreenshot, SessionsAppScreenshot} from "@/image-dir/image-dir.ts";
 
 export const projects = [
     {
@@ -33,5 +33,19 @@ export const projects = [
         img: SecaScreenshot,
         github: "https://github.com/CardosoDev04/seca-web-app",
         demo: ""
+    },
+    {
+        title: "Sessions Web Application",
+        description: "Sessions is a Web application that allows users to book gameplay sessions with their friends/peers.\n" +
+        "In this web app you can create sessions, search for players, create games, find sessions for a game you like and manage your own sessions.\n" +
+        "In terms of technicalities, the project was developed with Kotlin and the HTTP4K library in order to build a robust and clean backend,\n" +
+        "As well as a user-friendly and slick frontend built entirely with vanilla JS and TailwindCSS Lite.\n" +
+            "It's also worth noting that for this project a custom element library mimicking React's JSX was built in order to support clean html element manipulation in JS.\n"
+        + "The project is fully tested with Unit and Integration tests and well documented, both structure and feature wise.\n" +
+        "It was a little bit of a 'challenge' to see what we (my group and I) could build using almost no libraries. ",
+        technologies: ["Javascript", "TailwindCSS", "HTTP4K", "Kotlin", "JUnit", "PostgreSQL"],
+        img: SessionsAppScreenshot,
+        github: "",
+        demo : "https://sessions.cardososerver.xyz"
     }
 ]

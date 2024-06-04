@@ -12,6 +12,8 @@ export const RuneScreenshot = rune_screenshot
 export const SecaScreenshot = seca_screenshot
 export const PortfolioScreenshot = portfolio_screenshot
 
+export const SessionsAppScreenshot = "https://cdn.jsdelivr.net/gh/CardosoDev04/cdn-test/Screenshot%20from%202024-06-04%2023-45-13.png"
+
 // Technologies
 export const technologiesArray: string[] = [
     'https://user-images.githubusercontent.com/25181517/183890598-19a0ac2d-e88a-4005-a8df-1ee36782fde1.png',

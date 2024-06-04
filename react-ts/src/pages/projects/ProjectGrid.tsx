@@ -7,9 +7,10 @@ export const ProjectGrid = () => {
     return (
         <>
         <div className={"grid grid-cols-1 sm:grid-cols-3 mt-5"}>
-            { projects.map((project) => {
+            { projects.map((project,index) => {
                 const {isOpen, onOpen, onOpenChange} = useDisclosure();
-                return<Card className="py-4 mt-10 sm:mx-10">
+                const isCentered = index === 3;
+                return<Card className={`py-4 mt-10 sm:mx-10 ${isCentered ? "sm:col-start-2" : ""}`}>
                     <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                         <p className="text-tiny uppercase font-bold font-inter">Technologies used</p>
                         <small className="text-default-500 flex flex-row flex-wrap">{project.technologies.map((technology) => (
