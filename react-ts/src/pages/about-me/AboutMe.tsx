@@ -32,7 +32,7 @@ export const AboutMe = () => {
                                         <h1 className={"font-inter font-semibold text-2xl"}>Future studies</h1>
                                     </CardHeader>
                                 <CardBody>
-                                    When I finish my BSc in June 2025, I'm planning on applying to an MSc in Computer Science with a Software Development specialization. I'm still undecided on the institution but I'm sure I want to study in another country and the Netherlands is the one I'm leaning the most on :D
+                                    When I finish my BSc in June 2025, I'm planning on continuing my learning either by working or pursuing a MSc in a specialization field that suits me at that time. Nothing is decided, and its exciting :D
                                 </CardBody>
                                     </CardBody>
                             </Card>
